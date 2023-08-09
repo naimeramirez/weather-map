@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+p {
+    margin-bottom: 0;
+}
+
+#current-icon, #current-humidity, #current-wind, #current-pressure {
+    margin: 0 1em;
+}
+
+#map-container {
+    position: relative;
+}
+
+#map {
+    width: 100%;
+    height: 40vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.coordinates {
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: 11px;
+    line-height: 18px;
+    border-radius: 3px;
+    display: none;
+}
+
+#background-video {
+    object-fit: cover;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    opacity: 0.75;
+}
+
+#forecast-cards {
+    display: flex;
+    justify-content: space-evenly;
+    opacity: 0.7;
+}
+
+@media (max-width: 750px) {
+    #background-video {display: none}
+    #forecast-cards {display: block; width: auto}
+}
